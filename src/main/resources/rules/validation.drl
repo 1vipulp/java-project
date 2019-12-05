@@ -1,0 +1,11 @@
+package com.restapis.rules;
+
+import com.restapis.beans.Student;
+
+
+rule "case 1"
+	when
+		item: Student((int) getAge() > 10)
+	then
+		item.setMessage("You are teenager");
+end
